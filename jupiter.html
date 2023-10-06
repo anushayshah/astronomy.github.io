@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="Assets/planets-fontawesome/css/all.min.css">  
+    <link rel="stylesheet" href="Assets/planets-css/magnific-popup.css">       
+    <link rel="stylesheet" href="Assets/planets-css/tooplate-vertex.css">
+
+<style>
+      /* <!-- -----------------------------navbar SECTION -----------------------------  --> */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+  
+      .logo {
+        font-size: 24px;
+        color: white;
+      }
+  
+      .menu-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        margin-left: 88%;
+        display: none;
+      }
+  
+      .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding: 0 50px 0 0
+      }
+  
+      .menu li {
+        margin: 0 15px;
+        margin-right: 30px;
+        position: relative; /* Added */
+        padding-right: 20px;
+  
+      }
+  
+        .menu li  a{
+          color: white;
+          text-decoration: none;
+        }
+      .menu li  a:hover{
+       
+        color: #3498db;
+        transition: 0.4s;
+      }
+  
+      .submenu {
+        display: none ;
+      padding: 10px 5px 12px 5px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+      top: 100%;
+      left: -15px;
+      text-align: justify;
+      z-index: 1;
+      /* border-bottom: 1px solid white;      */
+      }
+  
+      .submenu li{
+        margin-top: 10px;
+        text-decoration: none;
+        list-style: none;         
+    }
+    
+      .menu-item:hover .submenu {
+        display: block;
+      }
+  
+      /* <!-- -----------------------------NAVBAR MEDIA QUERY   -----------------------------  --> */
+    /* Your existing styles for larger screens */
+
+/* Media Query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 50px;
+      height: 300px;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li {
+      margin: 10px;
+      text-align: left;
+  }
+
+  .menu-icon {
+      display: block;
+      margin-top: -8%;
+  }
+  
+  .submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 30%;
+      background-color: rgba(0, 0, 0, 0.795);
+  }
+  .submenu li{
+    height: 20px;
+    text-align: center;
+    
+}
+
+  /* Additional styling adjustments as needed */
+}
+
+
+      /* <!-- -----------------------------navbar  MEDIA QUE END  -------------------------------> */
+      /* <!-- ----------------------------- navbar END  -------------------------------> */
+  
+</style>
+</head>
+<body>
+    
+     <!-- -----------------------------NAVBAR SECTION -----------------------------  -->
+     <div class="navbar">
+        <div class="logo">Astronomy</div>
+          
+            <ul class="menu" id="menu">
+              <li class="menu-item"><a href="index.html" class="active">Home</a></li>
+              <li class="menu-item"><a href="universe.html" class="active">Universe</a></li>
+                <li class="menu-item"><a href="#">Galaxies &#9662;</a>
+                  <ul class="submenu" style="width: 240px ;">
+                    <li><a href="milkway-galaxy.html">The milky way</a></li>
+                    <li><a href="Andromeda-galaxy.html">Andromeda</a></li>
+                    <li><a href="canis-major-dwarf-galaxy.html">Canis major dwarf</a></li>
+                    <li><a href="maffie-1&2-galaxy.html">maffie 1&2</a></li>  
+                    <li><a href="magellanci-galaxy.html">magellanci</a></li> 
+                    <li><a href="cygnus-A.html">Cygnus A</a></li>  
+                    <li><a href="virgo-A-galaxy.html">virgo A galaxy</a></li>  
+        </ul>   
+      </li>
+          <!-- DROP DOWN MENU BAR  -->
+          <li class="menu-item"><a href="#">planets &#9662;</a>
+            <ul class="submenu">
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="mercury.html">Mercury</a></li>
+              <li><a href="mars.html">Mars</a></li> 
+              <li><a href="saturn.html">saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="neptune.html">Neptune</a></li> 
+             
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+          
+          <li class="menu-item"><a href="constellation.html">constellation</a></li>
+          <li class="menu-item"><a href="comet.html">Comets</a></li>
+          <li class="menu-item" class="menu-item"><a href="#"> New&#9662;</a>
+            <ul class="submenu" style="width: 180px;">
+              <li><a href="news.html">Letest News</a></li>
+              <li><a href="faq.html">FAQS</a></li>
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+        </ul>
+        <button class="menu-icon" id="menu-icon">&#9776;</button>
+      </div>
+   <!-- -----------------------------NAVBAR  END ------------------------------->
+ 
+     <!-- Content -->
+    <main>
+        <div id="intro" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/jup1.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">When Was Jupiter First Discovered?</a></h2>
+                        <p style="margin-top: 100px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Jupiter has been visible to the naked eye since ancient times and has been observed by humans for millennia. As a result, there is no specific individual or event that can be attributed to the "discovery" of Jupiter. Instead, its recognition as a bright and prominent celestial object is deeply rooted in the history of astronomy and human observations of the night sky. Ancient civilizations, such as the Babylonians, Greeks, and Romans, were aware of Jupiter's presence as one of the five visible planets (those planets that can be seen without a telescope) that move against the background of fixed stars. Jupiter's brightness and motion distinguished it from the stars and contributed to its recognition.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+    
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px;" src="Assets/planets-image/img/jup2.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">"King Of Planet" Size:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Jupiter is often referred to as the "King of Planets" due to its immense size, which makes it the largest planet in our solar system. Jupiter has an average diameter of about 139,822 kilometers (86,881 miles). This makes it more than 11 times wider than Earth and larger than all the other planets in our solar system combined.Jupiter's volume is approximately 1,431 times that of Earth. In other words, you could fit more than 1,300 Earths within the volume of Jupiter. Jupiter's mass is approximately 318 times that of Earth. Despite its enormous size, Jupiter's mass is still significantly less than that of the Sun.</p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/jup3.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">Jupiter Atmosphere:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Jupiter's atmosphere is a realm of breathtaking beauty and turbulent chaos. With its distinctive cloud bands, swirling storms, and vibrant colors, Jupiter's atmospheric features make it a captivating subject of study. One of the most recognizable features of Jupiter's atmosphere is its alternating bands of clouds and zones. These bands run parallel to the planet's equator and are created by powerful jet streams that separate regions of different wind speeds and directions.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-text-right">
+                    <a href="#services" class="tm-btn tm-btn-next">About Jupiter</a>
+                </div>   
+                
+            </div>
+            
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/jup4.jpeg"></div>
+        </div> <!-- #intro -->
+
+        <div id="services" class="tm-section">
+            <!-- Services left -->
+            <div class="tm-section-col tm-content">
+                <h2 class="tm-text-primary">ABOUT JUPITER</h2>
+                <p>Jupiter is a gas giant, predominantly composed of hydrogen and helium, with no solid surface like terrestrial planets. It's often referred to as a failed star due to its composition but lacks the mass necessary for nuclear fusion to occur in its core. With a diameter of about 139,822 kilometers (86,881 miles), Jupiter is approximately 11 times wider than Earth. Its immense size could fit more than 1,300 Earths within its volume. Jupiter's atmosphere is marked by prominent bands of clouds that circle the planet parallel to its equator. These bands alternate between light-colored zones and darker bands, driven by powerful winds and varying chemical compositions in the atmosphere.
+                </p>
+                <p>
+                    One of the most iconic features of Jupiter is the Great Red Spot, a massive storm system that has persisted for centuries. This colossal storm is larger than Earth itself and has been observed for over 300 years. Jupiter has four large moons, collectively known as the Galilean moons: Io, Europa, Ganymede, and Callisto. These moons were discovered by Galileo Galilei and are some of the largest and most geologically diverse moons in the solar system.
+                </p>
+                <div class="tm-text-right">
+                    <a href="#gallery" class="tm-btn tm-btn-next">Other Planets</a>
+                </div>                
+                <hr class="tm-hr tm-ml tm-sm-mt-30">
+                <div class="tm-row">
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/866346-200.png" alt="rotation">
+                        </div>                        
+                        <p>
+                            Jupiter has the shortest day in the solar system. One day on Jupiter takes only about 10 hours (the time it takes for Jupiter to rotate or spin around once), and Jupiter makes a complete orbit around the Sun (a year in Jovian time) in about 12 Earth years (4,333 Earth days).
+                        </p>
+                    </div>
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/2.png" alt="gravity">
+                        </div>                        
+                        <p>
+                            The gravity on Jupiter is greater than the gravity on Earth because Jupiter is more massive. Although Jupiter is a great deal larger in size, its surface gravity is just 2.4 times that of the surface gravity of Earth. This is because Jupiter is mostly made up of gases.
+                        </p>
+                    </div>
+                </div>                
+            </div>
+            
+            <!-- Services right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/jup6.jpg"></div>
+        </div> <!-- #services -->
+
+    
+        <div id="about" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Interesting Things About Jupiter</h2>
+                <p>
+                    Jupiter and its four largest moons form a kind of mini solar system within our solar system. The gravitational interactions between Jupiter and its moons have led to fascinating phenomena, such as tidal heating and volcanic activity on some of the moons often referred to as the Galilean moons (Io, Europa, Ganymede, and Callisto). These moons are named after their discoverer, Galileo Galilei, who observed them through his telescope in 1610. The arrangement of these moons around Jupiter shares some similarities with the solar system as a whole, leading to the term "mini solar system."
+                </p>
+                <p>
+                    Jupiter possesses a faint and relatively obscure ring system, which is much less prominent than Saturn's iconic rings. Jupiter's ring system is primarily composed of small, dark particles made of dust and rocky material. These particles are thought to be remnants of micrometeoroid impacts on Jupiter's moons,
+                </p>
+                <hr class="tm-hr tm-mb-50">                
+                <p class="tm-mb-50">
+                    particularly the small moon Metis, whose surface material gets ejected into space and forms the ring. Jupiter's ring system consists of several main components, including the main ring, the halo ring, and two gossamer rings. These components are divided by gaps known as divisions.
+                </p>
+                <div class="tm-text-right tm-mb-130">
+                    <a href="#contact" class="tm-btn tm-btn-next">Q/A</a>
+                </div>                
+            </div>
+            
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/jup5.jpg"></div>
+        </div> <!-- #about -->
+
+        <div id="contact" class="tm-section">
+            <!-- Contact left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Some Questions Asked About Jupiter</h2>
+                <p>
+                    Q: What is Jupiter's size compared to Earth?<br>
+                    A: Jupiter is about 11 times the diameter of Earth, making it the largest planet in our solar system.<br>
+                    
+                    Q: What is Jupiter mostly composed of?<br>
+                    A: Jupiter is primarily composed of hydrogen (about 75%) and helium (about 24%) with trace amounts of other elements.<br>
+                    
+                 Q: Does Jupiter have any rings?<br>
+                    A: Yes, Jupiter has a system of faint rings. They are not as prominent or well-defined as Saturn's rings, but they do exist.<br>
+                    
+                 Q: How many moons does Jupiter have?<br>
+                    A: Jupiter has 79 known moons as of my last knowledge update in September 2021. Some of the notable moons include Io, Europa, Ganymede, and Callisto.<br>
+                    
+                 Q: What is the Great Red Spot on Jupiter?<br>
+                    A: The Great Red Spot is a massive storm on Jupiter that has been raging for at least a few centuries. It's a giant anticyclonic storm, meaning it rotates counterclockwise in the planet's southern hemisphere.<br>
+                    
+                 Q: Does Jupiter have a strong magnetic field?<br>
+                    A: Yes, Jupiter has a very strong magnetic field, which is about 20,000 times stronger than Earth's magnetic field. This magnetic field creates a powerful magnetosphere around the planet.<br>
+                    
+                 Q: Does Jupiter emit its own light?<br>
+                    A: No, Jupiter doesn't emit its own light like a star. It reflects sunlight, which is why we can see it from Earth.<br>
+                    
+                 Q: What are the Galilean moons of Jupiter?<br>
+                    A: The Galilean moons are the four largest moons of Jupiter discovered by Galileo Galilei in 1610. They are Io, Europa, Ganymede, and Callisto.<br>
+                    
+                 Q: Can Jupiter support life?<br>
+                    A: It's highly unlikely that Jupiter could support life as we know it. It's a gas giant with extreme conditions, including high radiation levels and lack of a solid surface.<br>
+                    
+                     Q: What spacecraft have visited Jupiter?<br>
+                    A: Some of the spacecraft that have visited or studied Jupiter include Pioneer 10 and 11, Voyager 1 and 2, Galileo, and Juno. Juno is the most recent mission and is currently studying Jupiter's atmosphere and magnetic field.<br>
+
+                </p> 
+                <p>
+
+                </p>           
+            </div>
+            
+            <!-- Contact right -->
+            <div class="tm-section-col tm-parallax tm-relative" data-parallax="scroll" data-image-src="Assets/planets-image/img/jup7.jpg">
+                <!-- Map -->
+                <!-- <div class="mapouter">
+                    <div class="gmap-canvas">
+                        <iframe width="100%" height="420" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- #contact -->
+    </main>
+
+    <script src="Assets/planets-js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            // const tmMainNav = $("#tm-main-nav");
+
+            // tmMainNav.singlePageNav({
+            //     filter: ':not(.external)'
+            // });
+
+            // $('.navbar-toggler').click(function(e) {
+            //     e.stopPropagation();
+            //     tmMainNav.toggleClass('show');
+            // });
+
+            // $("html").click(function(e) {
+            //     $("#tm-main-nav").removeClass("show");
+            // });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#intro').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+    <script>
+                // <!-- -----------------------------NAVBAR TOGGLE  CODE ------------------------------->
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.menu');
+
+  menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); // Toggle the 'show' class for visibility
+  });
+});
+
+// <!-- -----------------------------NAVBAR TOGGLE END------------------------------->
+    </script>
+</body>
+<footer style="background-color: rgb(47, 46, 48); height: 20%;">
+    <p style="color: white; text-align: center; padding-top: 45px; padding-bottom: 20px;"> <span style="font-size: 25px; font-weight: bold;">Astronomy By Astro5</span> <br> Copyright reseved by Astro5</p>
+  </footer>
+</html>

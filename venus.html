@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Assets/planets-fontawesome/css/all.min.css">  
+    <link rel="stylesheet" href="Assets/planets-css/magnific-popup.css">       
+    <link rel="stylesheet" href="Assets/planets-css/tooplate-vertex.css">
+
+<style>
+      /* <!-- -----------------------------navbar SECTION -----------------------------  --> */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+  
+      .logo {
+        font-size: 24px;
+        color: white;
+      }
+  
+      .menu-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        margin-left: 88%;
+        display: none;
+      }
+  
+      .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding: 0 50px 0 0
+      }
+  
+      .menu li {
+        margin: 0 15px;
+        margin-right: 30px;
+        position: relative; /* Added */
+        padding-right: 20px;
+  
+      }
+  
+        .menu li  a{
+          color: white;
+          text-decoration: none;
+        }
+      .menu li  a:hover{
+       
+        color: #3498db;
+        transition: 0.4s;
+      }
+  
+      .submenu {
+        display: none ;
+      padding: 10px 5px 12px 5px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+      top: 100%;
+      left: -15px;
+      text-align: justify;
+      z-index: 1;
+      /* border-bottom: 1px solid white;      */
+      }
+  
+      .submenu li{
+        margin-top: 10px;
+        text-decoration: none;
+        list-style: none;         
+    }
+    
+      .menu-item:hover .submenu {
+        display: block;
+      }
+  
+      /* <!-- -----------------------------NAVBAR MEDIA QUERY   -----------------------------  --> */
+    /* Your existing styles for larger screens */
+
+/* Media Query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 50px;
+      height: 300px;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li {
+      margin: 10px;
+      text-align: left;
+  }
+
+  .menu-icon {
+      display: block;
+      margin-top: -8%;
+  }
+  
+  .submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 30%;
+      background-color: rgba(0, 0, 0, 0.795);
+  }
+  .submenu li{
+    height: 20px;
+    text-align: center;
+    
+}
+
+  /* Additional styling adjustments as needed */
+}
+
+
+      /* <!-- -----------------------------navbar  MEDIA QUE END  -------------------------------> */
+      /* <!-- ----------------------------- navbar END  -------------------------------> */
+  
+</style>
+</head>
+<body>
+    
+     <!-- -----------------------------NAVBAR SECTION -----------------------------  -->
+     <div class="navbar">
+        <div class="logo">Astronomy</div>
+          
+            <ul class="menu" id="menu">
+              <li class="menu-item"><a href="index.html" class="active">Home</a></li>
+              <li class="menu-item"><a href="universe.html" class="active">Universe</a></li>
+                <li class="menu-item"><a href="#">Galaxies &#9662;</a>
+                  <ul class="submenu" style="width: 220px ;">
+                    <li><a href="milkway-galaxy.html">The milky way</a></li>
+                    <li><a href="Andromeda-galaxy.html">Andromeda</a></li>
+                    <li><a href="canis-major-dwarf-galaxy.html">Canis major dwarf</a></li>
+                    <li><a href="maffie-1&2-galaxy.html">maffie 1&2</a></li>  
+                    <li><a href="magellanci-galaxy.html">magellanci</a></li> 
+                    <li><a href="cygnus-A.html">Cygnus A</a></li>  
+                    <li><a href="virgo-A-galaxy.html">virgo A galaxy</a></li>  
+        </ul>   
+      </li>
+          <!-- DROP DOWN MENU BAR  -->
+          <li class="menu-item"><a href="#">planets &#9662;</a>
+            <ul class="submenu">
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="mercury.html">Mercury</a></li>
+              <li><a href="mars.html">Mars</a></li> 
+              <li><a href="saturn.html">saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="neptune.html">Neptune</a></li> 
+             
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+          
+          <li class="menu-item"><a href="constellation.html">constellation</a></li>
+          <li class="menu-item"><a href="comet.html">Comets</a></li>
+          <li class="menu-item" class="menu-item"><a href="#"> New&#9662;</a>
+            <ul class="submenu" style="width: 180px;">
+              <li><a href="news.html">Letest News</a></li>
+              <li><a href="faq.html">FAQS</a></li>
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+        </ul>
+        <button class="menu-icon" id="menu-icon">&#9776;</button>
+      </div>
+   <!-- -----------------------------NAVBAR  END ------------------------------->
+ 
+     <!-- Content -->
+    <main>
+        <div id="intro" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/venus1.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">When Was Venus First Discovered?</a></h2>
+                        <p style="margin-top: 100px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            When Venus was first discovered by ancient civilizations,its brilliant appearance in the sky earned it names like the "Evening Star" and the "Morning Star." These early observers often didn't realize that it was the same object,attributing its appearances in the western and eastern skies to separate celestial bodies.In various cultures, Venus was associated with deities and mythological figures due to its striking luminosity. The Sumerians and Babylonians recorded observations of Venus as early as 3,000 BCE, referring to it as the "Queen of Heaven." In ancient Greece, Venus was identified with the goddess Aphrodite, the embodiment of love and beauty.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+    
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px;" src="Assets/planets-image/img/venus2.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">Earth's "sister planet" Size:</a></h2>
+                        <p style="margin-top: 100px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Venus, our neighboring planet, is often called Earth's "sister planet" due to its similar size. With a diameter of about 12,104 kilometers (7,521 miles), Venus is only slightly smaller than Earth. This close resemblance in size contributes to their shared status as rocky planets and underscores the intriguing differences that have emerged in their respective atmospheres and environments over time.</p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/venus3.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">Venus Atmosphere:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Venus boasts a thick and inhospitable atmosphere composed mainly of carbon dioxide, with traces of other gases like nitrogen and sulfur dioxide. This dense blanket of gases contributes to an extreme greenhouse effect, trapping heat and raising surface temperatures to scorching levels.The atmosphere's swirling clouds, primarily made up of sulfuric acid droplets, create Venus's bright appearance and contribute to its tumultuous and harsh climate.Dominated by carbon dioxide, this atmosphere is extremely dense and exerts pressure about 92 times greater than Earth's. The thick clouds of sulfuric acid shroud the planet, creating its bright appearance.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-text-right">
+                    <a href="#services" class="tm-btn tm-btn-next">About Venus</a>
+                </div>   
+                
+            </div>
+            
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/venus4.jpeg"></div>
+        </div> <!-- #intro -->
+
+        <div id="services" class="tm-section">
+            <!-- Services left -->
+            <div class="tm-section-col tm-content">
+                <h2 class="tm-text-primary">ABOUT VENUS</h2>
+                <p>Venus has an atmosphere predominantly composed of carbon dioxide, which has led to a runaway greenhouse effect. The thick atmosphere traps heat, resulting in surface temperatures that can reach up to 900 degrees Fahrenheit (475 degrees Celsius), making it the hottest planet in our solar system.Most planets, including Earth, rotate in the same direction as they orbit the Sun (prograde rotation). However, Venus rotates in the opposite direction (retrograde rotation), making its day-to-day rotation appear "backwards" compared to its orbital motion.
+                </p>
+                <p>
+                    Even though Mercury is closer to the Sun, Venus is the hottest planet in our solar system. Its thick atmosphere is full of the greenhouse gas carbon dioxide, and it has clouds of sulfuric acid.
+                </p>
+                <div class="tm-text-right">
+                    <a href="#gallery" class="tm-btn tm-btn-next">Other Planets</a>
+                </div>                
+                <hr class="tm-hr tm-ml tm-sm-mt-30">
+                <div class="tm-row">
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/866346-200.png" alt="rotation">
+                        </div>                        
+                        <p>
+                            Long Days, Short Years. Venus rotates very slowly on its axis – one day on Venus lasts 243 Earth days. The planet orbits the Sun faster than Earth, however, so one year on Venus takes only about 225 Earth days, making a Venusian day longer than its year!
+                        </p>
+                    </div>
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/2.png" alt="gravity">
+                        </div>                        
+                        <p>
+                            Since Venus and Earth are almost the same size and have about the same mass, the surface gravity on Venus is almost the same as the surface gravity on Earth. The surface gravity on Venus is about 91% of the surface gravity on Earth, so if you weigh 100 pounds on Earth, you would weigh 91 pounds on Venus.
+                        </p>
+                    </div>
+                </div>                
+            </div>
+            
+            <!-- Services right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/venus5.jpg"></div>
+        </div> <!-- #services -->
+
+        <div id="about" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Interesting Things About Venus</h2>
+                <p>
+                    The retrograde rotation of Venus remains an enigma. Unraveling the mystery of how and why Venus's rotation reversed direction compared to most other planets could provide insights into the complex gravitational interactions and collisions that shaped the early solar system.
+                </p>
+                <p>
+                    Despite numerous spacecraft missions, the surface of Venus remains largely unexplored due to its hostile conditions. What exactly lies beneath the thick cloud cover? Are there active volcanoes or tectonic processes shaping the surface? The recent interest in sending landers to Venus aims to answer these questions.
+                </p>
+                <hr class="tm-hr tm-mb-50">                
+                <p class="tm-mb-50">
+                    Venus rotates on its axis backward, compared to most of the other planets in the solar system that rotate anti-clockwise. This means that, on Venus, the Sun rises in the west and sets in the east, the opposite to what we experience on Earth.This is most likely because at some point it was hit by a large object which changed it’s rotation.
+                </p>
+                <div class="tm-text-right tm-mb-130">
+                    <a href="#contact" class="tm-btn tm-btn-next">Q/A</a>
+                </div>                
+            </div>
+            
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/venus6.jpg"></div>
+        </div> <!-- #about -->
+
+        <div id="contact" class="tm-section">
+            <!-- Contact left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Some Questions Asked About Venus</h2>
+                <p>
+                    Question: What is Venus often referred to due to its similar size and appearance to Earth?<br>
+
+Answer: Venus is often referred to as Earth's "sister planet" due to its similar size and proximity, but it's important to note that despite these similarities, Venus has a vastly different and inhospitable environment.<br>
+
+ Question: Why is Venus sometimes called the "Evening Star" or the "Morning Star"?<br>
+
+Answer: Venus is often visible in the evening sky shortly after sunset or in the morning sky just before sunrise. Its brightness and proximity to the Sun give it the appearance of a bright star, earning it the titles of the "Evening Star" when seen in the west after sunset and the "Morning Star" when seen in the east before sunrise.<br>
+
+ Question: What is the greenhouse effect, and why is it extremely pronounced on Venus?<br>
+
+Answer: The greenhouse effect is a process where certain gases in a planet's atmosphere trap heat from the Sun, warming the planet's surface. On Venus, this effect is extremely pronounced due to its thick atmosphere primarily composed of carbon dioxide. This results in a runaway greenhouse effect, causing surface temperatures to soar to over 450 degrees Celsius (over 850 degrees Fahrenheit), making Venus the hottest planet in our solar system.<br>
+
+ Question: What unique feature does Venus exhibit in terms of its rotation?<br>
+
+Answer: Venus rotates on its axis in the opposite direction to most planets, including Earth. This means that its "day" (one rotation on its axis) is longer than its "year" (orbit around the Sun), resulting in days on Venus being longer than its years.<br>
+
+ Question: What is the surface of Venus like, and why is it challenging to study?<br>
+
+Answer: Venus has a rocky surface, similar to Earth's, but it's extremely inhospitable with high temperatures, crushing atmospheric pressure, and corrosive clouds of sulfuric acid. Due to this harsh environment, studying Venus is challenging, and many spacecraft that have landed on its surface have only survived for a short time.<br>
+
+ Question: What mission provided the most comprehensive data about Venus and its atmosphere?<br>
+
+Answer: The Venus Express mission, launched by the European Space Agency (ESA) in 2005, provided a wealth of information about Venus' atmosphere, temperature, cloud formations, and more. It greatly enhanced our understanding of the planet's environment.<br>
+
+ Question: Does Venus have any moons?<br>
+
+Answer: No, Venus does not have any natural moons or satellites.<br>
+
+ Question: How does Venus rank in terms of brightness among the celestial objects visible from Earth?<br>
+
+Answer: Venus is often the brightest natural object in the night sky, second only to the Moon. Its brightness is due to its thick cloud cover reflecting sunlight.<br>
+
+ Question: Are there any future missions planned to study Venus?<br>
+Answer: Yes, as of my last update in September 2021, there has been renewed interest in studying Venus, and various space agencies are considering future missions to better understand its environment, geology, and history.<br>
+
+                </p> 
+                <p>
+
+                </p>           
+            </div>
+            
+            <!-- Contact right -->
+            <div class="tm-section-col tm-parallax tm-relative" data-parallax="scroll" data-image-src="Assets/planets-image/img/venus7.jpg">
+                <!-- Map -->
+                <!-- <div class="mapouter">
+                    <div class="gmap-canvas">
+                        <iframe width="100%" height="420" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- #contact -->
+    </main>
+
+    <script src="Assets/planets-js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            // const tmMainNav = $("#tm-main-nav");
+
+            // tmMainNav.singlePageNav({
+            //     filter: ':not(.external)'
+            // });
+
+            // $('.navbar-toggler').click(function(e) {
+            //     e.stopPropagation();
+            //     tmMainNav.toggleClass('show');
+            // });
+
+            // $("html").click(function(e) {
+            //     $("#tm-main-nav").removeClass("show");
+            // });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#intro').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+    <script>
+                // <!-- -----------------------------NAVBAR TOGGLE  CODE ------------------------------->
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.menu');
+
+  menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); // Toggle the 'show' class for visibility
+  });
+});
+
+// <!-- -----------------------------NAVBAR TOGGLE END------------------------------->
+    </script>
+</body>
+<footer style="background-color: rgb(47, 46, 48); height: 20%;">
+    <p style="color: white; text-align: center; padding-top: 45px; padding-bottom: 20px;"> <span style="font-size: 25px; font-weight: bold;">Astronomy By Astro5</span> <br> Copyright reseved by Astro5</p>
+  </footer>
+</html>

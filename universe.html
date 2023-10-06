@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Assets/planets-fontawesome/css/all.min.css">  
+    <link rel="stylesheet" href="Assets/planets-css/magnific-popup.css">       
+    <link rel="stylesheet" href="Assets/planets-css/tooplate-vertex.css">
+
+<style>
+      /* <!-- -----------------------------navbar SECTION -----------------------------  --> */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+  
+      .logo {
+        font-size: 24px;
+        color: white;
+      }
+  
+      .menu-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        margin-left: 88%;
+        display: none;
+      }
+  
+      .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding: 0 50px 0 0
+      }
+  
+      .menu li {
+        margin: 0 15px;
+        margin-right: 30px;
+        position: relative; /* Added */
+        padding-right: 20px;
+  
+      }
+  
+        .menu li  a{
+          color: white;
+          text-decoration: none;
+        }
+      .menu li  a:hover{
+       
+        color: #3498db;
+        transition: 0.4s;
+      }
+  
+      .submenu {
+        display: none ;
+      padding: 10px 5px 12px 5px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+      top: 100%;
+      left: -15px;
+      text-align: justify;
+      z-index: 1;
+      /* border-bottom: 1px solid white;      */
+      }
+  
+      .submenu li{
+        margin-top: 10px;
+        text-decoration: none;
+        list-style: none;         
+    }
+    
+      .menu-item:hover .submenu {
+        display: block;
+      }
+  
+      /* <!-- -----------------------------NAVBAR MEDIA QUERY   -----------------------------  --> */
+    /* Your existing styles for larger screens */
+
+/* Media Query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 50px;
+      height: 300px;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li {
+      margin: 10px;
+      text-align: left;
+  }
+
+  .menu-icon {
+      display: block;
+      margin-top: -8%;
+  }
+  
+  .submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 30%;
+      background-color: rgba(0, 0, 0, 0.795);
+  }
+  .submenu li{
+    height: 20px;
+    text-align: center;
+    
+}
+
+  /* Additional styling adjustments as needed */
+}
+
+
+      /* <!-- -----------------------------navbar  MEDIA QUE END  -------------------------------> */
+      /* <!-- ----------------------------- navbar END  -------------------------------> */
+  
+</style>
+</head>
+<body>
+    
+     <!-- -----------------------------NAVBAR SECTION -----------------------------  -->
+     <div class="navbar">
+        <div class="logo">Astronomy</div>
+          
+            <ul class="menu" id="menu">
+              <li class="menu-item"><a href="index.html" class="active">Home</a></li>
+              <li class="menu-item"><a href="universe.html" class="active">Universe</a></li>
+                <li class="menu-item"><a href="#">Galaxies &#9662;</a>
+                  <ul class="submenu" style="width: 240px ;">
+                    <li><a href="milkway-galaxy.html">The milky way</a></li>
+                    <li><a href="Andromeda-galaxy.html">Andromeda</a></li>
+                    <li><a href="canis-major-dwarf-galaxy.html">Canis major dwarf</a></li>
+                    <li><a href="maffie-1&2-galaxy.html">maffie 1&2</a></li>  
+                    <li><a href="magellanci-galaxy.html">magellanci</a></li> 
+                    <li><a href="cygnus-A.html">Cygnus A</a></li>  
+                    <li><a href="virgo-A-galaxy.html">virgo A galaxy</a></li>  
+        </ul>   
+      </li>
+          <!-- DROP DOWN MENU BAR  -->
+          <li class="menu-item"><a href="#">planets &#9662;</a>
+            <ul class="submenu">
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="mercury.html">Mercury</a></li>
+              <li><a href="mars.html">Mars</a></li> 
+              <li><a href="saturn.html">saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="neptune.html">Neptune</a></li> 
+             
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+          
+          <li class="menu-item"><a href="constellation.html">constellation</a></li>
+          <li class="menu-item"><a href="comet.html">Comets</a></li>
+          <li class="menu-item" class="menu-item"><a href="#"> New&#9662;</a>
+            <ul class="submenu" style="width: 180px;">
+              <li><a href="news.html">Letest News</a></li>
+              <li><a href="faq.html">FAQS</a></li>
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+        </ul>
+        <button class="menu-icon" id="menu-icon">&#9776;</button>
+      </div>
+   <!-- -----------------------------NAVBAR  END ------------------------------->
+ 
+     <!-- Content -->
+    <main>
+        <div id="intro" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/images/index-images/hourse-nebula-3.png" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">When Was universe Discovered?</a></h2>
+                        <p style="margin-top: 100px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            The concept of the universe, as the entirety of space, time, matter, and energy, has been a subject of human contemplation for centuries. However, the understanding of the universe as we know it today has evolved over time through the contributions of various cultures, civilizations, and scientific advancements.
+                            The ancient civilizations, such as the Greeks and Egyptians,
+                             had their own cosmological beliefs and models that described the cosmos.
+                              Philosophers like Aristotle and Plato pondered the nature of the universe and its underlying principles. <br>
+                              It was in the early modern era, during the Scientific Revolution and the subsequent development of astronomy, that our understanding of the universe began to take a more systematic and evidence-based form. Pioneers like Nicolaus Copernicus, Johannes Kepler, and Galileo Galilei laid the foundations for the heliocentric model of the solar system, which marked a major shift in how we perceived the relationships between celestial bodies. </p>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+    
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px;" src="Assets/images/index-images/bg-4.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">"Universe" Size:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            The size of the universe is an awe-inspiring and mind-boggling concept that continues to challenge our understanding. The observable universe, which encompasses all the galaxies, stars, planets, and cosmic structures we can currently detect, is estimated to be about 93 billion light-years in diameter.</p>
+                    
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/images/index-images/bg-3.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">universe Atmosphere:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            The term "universe" typically refers to the entirety of space, time, matter, and energy, encompassing all celestial bodies, galaxies, stars, planets, and more. It is not considered to have an atmosphere in the same way that individual planets or celestial bodies do. An atmosphere is a layer of gases that surrounds a planet or other celestial body and is held in place by gravity.   </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+            
+            </div>
+            
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/images/index-images/bg-1.jpg"></div>
+        </div> <!-- #intro -->
+
+        <div id="services" class="tm-section">
+            <!-- Services left -->
+            <div class="tm-section-col tm-content">
+                <h2 class="tm-text-primary">ABOUT Universe</h2>
+                <p>In the case of the universe, there is no central "location" that can be described as having an atmosphere. The universe is the vast expanse in which all known matter and energy exist, and it lacks a specific boundary or edge that would define its outer limits.
+                    When discussing the universe, terms like "space" or "cosmic vacuum" are used to describe the near-perfect vacuum of empty space that exists between galaxies, stars, and other cosmic structures. This space is extremely low in density, containing only a few atoms or particles per cubic meter.</p>
+                <p>However, it's important to note that the concept of the universe, space, and the interactions between cosmic objects are highly complex and often counterintuitive. The universe is governed by the laws of physics and the principles of general relativity and quantum mechanics, which shape the behavior of matter and energy on cosmic scales.
+ In summary, the universe as a whole is not described as having an atmosphere in the same way that individual planets or celestial bodies do. Instead, it's an expansive realm filled with cosmic structures, galaxies, and the vast emptiness of space between them.</p>
+                              
+                <hr class="tm-hr tm-ml tm-sm-mt-30">
+                <div class="tm-row">
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/866346-200.png" alt="rotation">
+                        </div>                        
+                        <p>
+                        Universe orbits the Sun, it completes one rotation every 24.6 hours, which is very similar to one day on Earth (23.9 hours). Martian days are called sols – short for "solar day." A year on Mars lasts 669.6 sols, which is the same as 687 Earth days.
+                        </p>
+                    </div>
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/2.png" alt="gravity">
+                        </div>                        
+                        <p>
+                            Current cosmological models, including the Big Bang theory and the inflationary model, suggest that the universe could be much larger than what we can currently observe.  </p>
+                    </div>
+                </div>                
+            </div>
+            
+            <!-- Services right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/images/index-images/eagle-nebula-star-1"></div>
+        </div> <!-- #services -->
+
+        
+
+        <div id="about" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Interesting Things About Universe</h2>
+                <p>
+                    Around 95% of the universe is made up of "dark matter" and "dark energy," both of which are invisible and still not fully understood. Dark matter's gravitational effects can be observed, but its nature remains a mystery. Dark energy is believed to be responsible for the accelerating expansion of the universe. </p>
+                <p>
+                    The cosmic microwave background radiation is the faint glow of light that permeates the universe. It's the afterglow of the Big Bang and provides a snapshot of the universe's early stages, helping scientists understand its composition and evolution. </p>
+                <hr class="tm-hr tm-mb-50">                
+                <p class="tm-mb-50">
+                    The observable universe is limited by the distance that light has traveled since the Big Bang. This sphere of observability is estimated to be about 93 billion light-years in diameter, but the actual universe could be much larger. </p>
+                              
+            </div>
+            
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/images/index-images/bg-4.jpg"></div>
+        </div> <!-- #about -->
+
+        <div id="contact" class="tm-section">
+            <!-- Contact left -->
+            <!-- <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Some Questions Asked About neptune</h2>
+                <p>
+                    Question: What is the average distance between Earth and neptune?<br>
+Answer: The average distance between Earth and neptune is about 225 million kilometers (140 million miles).<br>
+
+Question: Why does neptune appear red in the night sky?<br>
+Answer: neptune appears red in the night sky due to its iron-rich surface. The iron oxide, or rust, on the surface gives it a reddish color, which is why it's often referred to as the "Red Planet."<br>
+
+Question: What are the prominent features on uranus' surface?<br>
+Answer: neptune' surface features include the largest volcano in the solar system, Olympus Mons, the vast Valles Marineris canyon system, and the polar ice caps composed of water and frozen carbon dioxide.<br>
+
+Question: What is the Martian atmosphere mostly composed of?<br>
+Answer: The Martian atmosphere is mostly composed of carbon dioxide (around 95.3%), with traces of nitrogen and argon.<br>
+
+Question: What are some of the challenges of human colonization on neptune?<br>
+Answer: Some challenges of human colonization on Mars include the thin atmosphere, extreme cold, lack of liquid water, high levels of radiation, and the need to establish sustainable habitats and life support systems.<br>
+
+Question: Which space agency successfully landed the Perseverance rover on ?<br>neptune
+Answer: The Perseverance rover was landed on uranus by NASA, the United States' space agency.<br>
+
+Question: What is the significance of finding water ice on neptune?<br>
+Answer: The discovery of water ice on neptune is significant because it could potentially provide resources for future human missions, such as a source of drinking water and a raw material for producing oxygen and rocket fuel.<br>
+
+Question: How long is a day on neptune?<br>
+Answer: A day on uneptune, known as a "sol," is approximately 24 hours and 39 minutes.<br>
+
+Question: What are dust storms on uranus, and how do they affect the planet?<br>
+Answer: Dust storms on uranus are massive atmospheric disturbances that can engulf the entire planet. These storms can affect visibility, temperature, and solar power generation for spacecraft and rovers.<br>
+
+Question: Are there any missions planned to bring Martian soil samples back to Earth?<br>
+Answer: Yes, NASA's Perseverance rover has collected samples of Martian soil and rock with the intention of returning them to Earth in collaboration with future missions. This would provide scientists with invaluable insights into uranus' geological history.<br>
+
+                </p> 
+                <p>
+
+                </p>           
+            </div>
+             -->
+            <!-- Contact right -->
+            <div class="tm-section-col tm-parallax tm-relative" data-parallax="scroll" data-image-src="Assets/images/index-images/bg-4.jpg">
+                <!-- Map -->
+                <!-- <div class="mapouter">
+                    <div class="gmap-canvas">
+                        <iframe width="100%" height="420" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- #contact -->
+    </main>
+
+    <script src="Assets/planets-js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            // const tmMainNav = $("#tm-main-nav");
+
+            // tmMainNav.singlePageNav({
+            //     filter: ':not(.external)'
+            // });
+
+            // $('.navbar-toggler').click(function(e) {
+            //     e.stopPropagation();
+            //     tmMainNav.toggleClass('show');
+            // });
+
+            // $("html").click(function(e) {
+            //     $("#tm-main-nav").removeClass("show");
+            // });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#intro').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+    <script>
+                // <!-- -----------------------------NAVBAR TOGGLE  CODE ------------------------------->
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.menu');
+
+  menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); // Toggle the 'show' class for visibility
+  });
+});
+
+// <!-- -----------------------------NAVBAR TOGGLE END------------------------------->
+    </script>
+</body>
+<footer style="background-color: rgb(47, 46, 48); height: 20%;">
+    <p style="color: white; text-align: center; padding-top: 45px; padding-bottom: 20px;"> <span style="font-size: 25px; font-weight: bold;">Astronomy By Astro5</span> <br> Copyright reseved by Astro5</p>
+  </footer>
+</html>

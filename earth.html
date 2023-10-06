@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Assets/planets-fontawesome/css/all.min.css">  
+    <link rel="stylesheet" href="Assets/planets-css/magnific-popup.css">       
+    <link rel="stylesheet" href="Assets/planets-css/tooplate-vertex.css">
+
+<style>
+    
+      /* <!-- -----------------------------navbar SECTION -----------------------------  --> */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+  
+      .logo {
+        font-size: 24px;
+        color: white;
+      }
+  
+      .menu-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        margin-left: 88%;
+        display: none;
+      }
+  
+      .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding: 0 50px 0 0
+      }
+  
+      .menu li {
+        margin: 0 15px;
+        margin-right: 30px;
+        position: relative; /* Added */
+        padding-right: 20px;
+  
+      }
+  
+        .menu li  a{
+          color: white;
+          text-decoration: none;
+        }
+      .menu li  a:hover{
+       
+        color: #3498db;
+        transition: 0.4s;
+      }
+  
+      .submenu {
+        display: none ;
+      padding: 10px 5px 12px 5px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+      top: 100%;
+      left: -15px;
+      text-align: justify;
+      z-index: 1;
+      /* border-bottom: 1px solid white;      */
+      }
+  
+      .submenu li{
+        margin-top: 10px;
+        text-decoration: none;
+        list-style: none;         
+    }
+    
+      .menu-item:hover .submenu {
+        display: block;
+      }
+  
+      /* <!-- -----------------------------NAVBAR MEDIA QUERY   -----------------------------  --> */
+    /* Your existing styles for larger screens */
+
+/* Media Query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 50px;
+      height: 300px;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li {
+      margin: 10px;
+      text-align: left;
+  }
+
+  .menu-icon {
+      display: block;
+      margin-top: -8%;
+  }
+  
+  .submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 30%;
+      background-color: rgba(0, 0, 0, 0.795);
+  }
+  .submenu li{
+    height: 20px;
+    text-align: center;
+    
+}
+
+  /* Additional styling adjustments as needed */
+}
+
+
+      /* <!-- -----------------------------navbar  MEDIA QUE END  -------------------------------> */
+      /* <!-- ----------------------------- navbar END  -------------------------------> */
+  
+</style>
+</head>
+<body>
+    
+     <!-- -----------------------------NAVBAR SECTION -----------------------------  -->
+     <div class="navbar">
+        <div class="logo">Astronomy</div>
+          
+            <ul class="menu" id="menu">
+              <li class="menu-item"><a href="index.html" class="active">Home</a></li>
+              <li class="menu-item"><a href="universe.html" class="active">Universe</a></li>
+                <li class="menu-item"><a href="#">Galaxies &#9662;</a>
+                  <ul class="submenu" style="width: 240px ;">
+                    <li><a href="milkway-galaxy.html">The milky way</a></li>
+                    <li><a href="Andromeda-galaxy.html">Andromeda</a></li>
+                    <li><a href="canis-major-dwarf-galaxy.html">Canis major dwarf</a></li>
+                    <li><a href="maffie-1&2-galaxy.html">maffie 1&2</a></li>  
+                    <li><a href="magellanci-galaxy.html">magellanci</a></li> 
+                    <li><a href="cygnus-A.html">Cygnus A</a></li>  
+                    <li><a href="virgo-A-galaxy.html">virgo A galaxy</a></li>  
+        </ul>   
+      </li>
+          <!-- DROP DOWN MENU BAR  -->
+          <li class="menu-item"><a href="#">planets &#9662;</a>
+            <ul class="submenu">
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="mercury.html">Mercury</a></li>
+              <li><a href="mars.html">Mars</a></li> 
+              <li><a href="saturn.html">saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="neptune.html">Neptune</a></li> 
+             
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+          
+          <li class="menu-item"><a href="constellation.html">constellation</a></li>
+          <li class="menu-item"><a href="comet.html">Comets</a></li>
+          <li class="menu-item" class="menu-item"><a href="#"> New&#9662;</a>
+            <ul class="submenu" style="width: 180px;">
+              <li><a href="news.html">Letest News</a></li>
+              <li><a href="faq.html">FAQS</a></li>
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+        </ul>
+        <button class="menu-icon" id="menu-icon">&#9776;</button>
+      </div>
+  <!-- -----------------------------NAVBAR  END ------------------------------->
+
+    
+     <!-- Content -->
+    <main>
+        <div id="intro" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/earth5.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">When Was Earth First Discovered?</a></h2>
+                        <p style="margin-top: 100px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            The concept of Earth as a planet orbiting the Sun and being a celestial body in the universe was understood by ancient civilizations. However, the idea of Earth as a planet was a gradual development, and there wasn't a single "discovery" moment like with some other celestial objects. Ancient civilizations like the Babylonians, Greeks, and Egyptians had knowledge of Earth's position in relation to the Sun, Moon, and other stars. They observed the changing positions of celestial bodies and developed models of the cosmos that included Earth as a spherical object.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+    
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px;" src="Assets/planets-image/img/earth7.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">"Planet Earth" Size:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Earth is a relatively modest-sized planet within our solar system. It has an average diameter of about 12,742 kilometers (7,918 miles). This makes Earth the fifth-largest planet in our solar system.
+                            To put its size in perspective, Earth is roughly 109 times the diameter of its Moon, and it's about 1/109th the diameter of the largest planet, Jupiter. Its size is crucial for supporting a diverse range of ecosystems and enabling the right conditions for life as we know it.</p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/earth8.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">Earth Atmosphere:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Earth's atmosphere is a delicate veil of gases that envelops the planet, extending from its surface into space. Composed primarily of nitrogen (about 78%) and oxygen (about 21%), with trace amounts of other gases like carbon dioxide and water vapor, the atmosphere serves as a lifeline for all life forms on Earth.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-text-right">
+                    <a href="#services" class="tm-btn tm-btn-next">About Earth</a>
+                </div>   
+                
+            </div>
+            
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/earth1.jpg"></div>
+        </div> <!-- #intro -->
+
+        <div id="services" class="tm-section">
+            <!-- Services left -->
+            <div class="tm-section-col tm-content">
+                <h2 class="tm-text-primary">ABOUT EARTH</h2>
+                <p>Nestled in the vast cosmos, Earth stands as a magnificent testament to the wonders of the universe. A jewel of vibrant ecosystems, it teems with life, its diverse landscapes showcasing the artistic handiwork of nature's creative forces. With its unique blend of breathable atmosphere and temperate climate, Earth cradles the marvel of liquid water, fostering the intricate web of life that has flourished across its surface. Towering mountains, meandering rivers, lush forests, and expansive oceans together paint a canvas of breathtaking beauty. 
+                </p>
+                <p>
+                    Morbi a sapien vitae nunc mollis efficitur quis eu purus. Donec nec orci pharetra, ullamcorper orci eu, gravida dolor. Morbi at rutrum nibh. Sed a erat vitae ipsum mollis tincidunt sed nec orci.
+                </p>
+                <div class="tm-text-right">
+                    <a href="#gallery" class="tm-btn tm-btn-next">Other Planets</a>
+                </div>                
+                <hr class="tm-hr tm-ml tm-sm-mt-30">
+                <div class="tm-row">
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/866346-200.png" alt="rotation">
+                        </div>                        
+                        <p>
+                            The Earth rotates on its axis relative to the Sun every 24.0 hours mean solar time, with an inclination of 23.45 degrees from the plane of its orbit around the Sun.
+                        </p>
+                    </div>
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/2.png" alt="gravity">
+                        </div>                        
+                        <p>
+                            The average gravitational pull of the Earth is 9.8 meters per second squared (m/s2). The Earth is made of different substances like air, rock, and water. These substances have a different amount of mass in a certain amount of space (density).
+                        </p>
+                    </div>
+                </div>                
+            </div>
+            
+            <!-- Services right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/earth2.jpg"></div>
+        </div> <!-- #services -->
+
+        <div id="about" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Interesting Things About Earth</h2>
+                <p>
+                    Earth's oceans, often referred to as the "Blue Planet's Liquid Gold," are mesmerizing realms that hold an abundance of mysteries and treasures. These vast expanses of saltwater cover over two-thirds of Earth's surface and play an essential role in shaping our planet's climate, supporting diverse ecosystems, and fostering life itself.
+                </p>
+                <p>
+                    Photosynthesis, the seemingly miraculous process that occurs within plants, algae, and some bacteria, holds the key to Earth's oxygen-rich atmosphere and the foundation of life as we know it. This remarkable biological feat has shaped our planet's history, atmosphere, and ecosystems in profound ways.
+                </p>
+                <hr class="tm-hr tm-mb-50">                
+                <p class="tm-mb-50">
+                    Trace the history-altering impact of photosynthesis, the process by which plants convert sunlight into energy and release oxygen as a byproduct. Learn how this oxygen revolution transformed Earth's atmosphere and enabled the evolution of complex life forms.
+                </p>
+                <div class="tm-text-right tm-mb-130">
+                    <a href="#contact" class="tm-btn tm-btn-next">Q/A</a>
+                </div>                
+            </div>
+            
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/earth4.jpg"></div>
+        </div> <!-- #about -->
+
+        <div id="contact" class="tm-section">
+            <!-- Contact left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Some Questions Asked About Earth</h2>
+                <p>
+                    Question: What is the approximate diameter of Earth?<br>
+Answer: Earth's diameter is approximately 12,742 kilometers (7,918 miles).<br>
+Question: What is the Earth's largest ocean?<br>
+Answer: The Pacific Ocean is the Earth's largest and deepest ocean.<br>
+
+Question: What causes the seasons on Earth?<br>
+Answer: The tilt of Earth's axis causes different parts of the planet to receive varying amounts of sunlight throughout the year, leading to the changing seasons.<br>
+
+Question: What is Earth's primary source of energy for its climate and weather?<br>
+Answer: The Sun is Earth's primary source of energy, providing light and heat that drive climate and weather systems.<br>
+
+Question: How much of Earth's surface is covered by water?<br>
+Answer: About 71% of Earth's surface is covered by water, with the majority being in the form of oceans.<br>
+Question: What is the outermost solid layer of Earth called?<br>
+Answer: The outermost solid layer of Earth is called the crust.<br>
+
+Question: What layer of Earth is responsible for generating its magnetic field?<br>
+Answer: Earth's magnetic field is generated by the liquid outer core, composed mainly of iron and nickel, in a process known as the geodynamo.<br>
+
+Question: Which natural satellite orbits Earth?<br>
+Answer: Earth's natural satellite is the Moon.<br>
+
+Question: What is Earth's atmosphere primarily composed of?<br>
+Answer: Earth's atmosphere is primarily composed of nitrogen (about 78%) and oxygen (about 21%), with trace amounts of other gases.<br>
+
+Question: What is the highest mountain on Earth?<br>
+Answer: Mount Everest, located in the Himalayas, is the highest mountain on Earth, with an elevation of 8,848 meters (29,029 feet) above sea level.<br>
+
+                </p> 
+                <p>
+
+                </p>           
+            </div>
+            
+            <!-- Contact right -->
+            <div class="tm-section-col tm-parallax tm-relative" data-parallax="scroll" data-image-src="Assets/planets-image/img/earth3.jpg">
+                <!-- Map -->
+                <!-- <div class="mapouter">
+                    <div class="gmap-canvas">
+                        <iframe width="100%" height="420" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- #contact -->
+    </main>
+
+    <script src="Assets/planets-js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            // const tmMainNav = $("#tm-main-nav");
+
+            // tmMainNav.singlePageNav({
+            //     filter: ':not(.external)'
+            // });
+
+            // $('.navbar-toggler').click(function(e) {
+            //     e.stopPropagation();
+            //     tmMainNav.toggleClass('show');
+            // });
+
+            // $("html").click(function(e) {
+            //     $("#tm-main-nav").removeClass("show");
+            // });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#intro').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+    <script>
+        // <!-- -----------------------------NAVBAR TOGGLE  CODE ------------------------------->
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.menu');
+
+  menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); // Toggle the 'show' class for visibility
+  });
+});
+
+// <!-- -----------------------------NAVBAR TOGGLE END------------------------------->
+
+    </script>
+</body>
+<footer style="background-color: rgb(47, 46, 48); height: 20%;">
+    <p style="color: white; text-align: center; padding-top: 45px; padding-bottom: 20px;"> <span style="font-size: 25px; font-weight: bold;">Astronomy By Astro5</span> <br> Copyright reseved by Astro5</p>
+  </footer>
+</html>

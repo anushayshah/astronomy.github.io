@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mercurey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Assets/planets-fontawesome/css/all.min.css">  
+    <link rel="stylesheet" href="Assets/planets-css/magnific-popup.css">       
+    <link rel="stylesheet" href="Assets/planets-css/tooplate-vertex.css">
+
+<style>
+      /* <!-- -----------------------------navbar SECTION -----------------------------  --> */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+  
+      .logo {
+        font-size: 24px;
+        color: white;
+      }
+  
+      .menu-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        margin-left: 88%;
+        display: none;
+      }
+  
+      .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding: 0 50px 0 0
+      }
+  
+      .menu li {
+        margin: 0 15px;
+        margin-right: 30px;
+        position: relative; /* Added */
+        padding-right: 20px;
+  
+      }
+  
+        .menu li  a{
+          color: white;
+          text-decoration: none;
+        }
+      .menu li  a:hover{
+       
+        color: #3498db;
+        transition: 0.4s;
+      }
+  
+      .submenu {
+        display: none ;
+      padding: 10px 5px 12px 5px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+      top: 100%;
+      left: -15px;
+      text-align: justify;
+      z-index: 1;
+      /* border-bottom: 1px solid white;      */
+      }
+  
+      .submenu li{
+        margin-top: 10px;
+        text-decoration: none;
+        list-style: none;         
+    }
+    
+      .menu-item:hover .submenu {
+        display: block;
+      }
+  
+      /* <!-- -----------------------------NAVBAR MEDIA QUERY   -----------------------------  --> */
+    /* Your existing styles for larger screens */
+
+/* Media Query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 50px;
+      height: 300px;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li {
+      margin: 10px;
+      text-align: left;
+  }
+
+  .menu-icon {
+      display: block;
+      margin-top: -8%;
+  }
+  
+  .submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 30%;
+      background-color: rgba(0, 0, 0, 0.795);
+  }
+  .submenu li{
+    height: 20px;
+    text-align: center;
+    
+}
+
+  /* Additional styling adjustments as needed */
+}
+
+
+      /* <!-- -----------------------------navbar  MEDIA QUE END  -------------------------------> */
+      /* <!-- ----------------------------- navbar END  -------------------------------> */
+  
+</style>
+</head>
+<body>
+    
+     <!-- -----------------------------NAVBAR SECTION -----------------------------  -->
+     <div class="navbar">
+        <div class="logo">Astronomy</div>
+          
+            <ul class="menu" id="menu">
+              <li class="menu-item"><a href="index.html" class="active">Home</a></li>
+              <li class="menu-item"><a href="universe.html" class="active">Universe</a></li>
+                <li class="menu-item"><a href="#">Galaxies &#9662;</a>
+                  <ul class="submenu" style="width: 240px ;">
+                    <li><a href="milkway-galaxy.html">The milky way</a></li>
+                    <li><a href="Andromeda-galaxy.html">Andromeda</a></li>
+                    <li><a href="canis-major-dwarf-galaxy.html">Canis major dwarf</a></li>
+                    <li><a href="maffie-1&2-galaxy.html">maffie 1&2</a></li>  
+                    <li><a href="magellanci-galaxy.html">magellanci</a></li> 
+                    <li><a href="cygnus-A.html">Cygnus A</a></li>  
+                    <li><a href="virgo-A-galaxy.html">virgo A galaxy</a></li>  
+        </ul>   
+      </li>
+          <!-- DROP DOWN MENU BAR  -->
+          <li class="menu-item"><a href="#">planets &#9662;</a>
+            <ul class="submenu">
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="mercury.html">Mercury</a></li>
+              <li><a href="mars.html">Mars</a></li> 
+              <li><a href="saturn.html">saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="neptune.html">Neptune</a></li> 
+             
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+          
+          <li class="menu-item"><a href="constellation.html">constellation</a></li>
+          <li class="menu-item"><a href="comet.html">Comets</a></li>
+          <li class="menu-item" class="menu-item"><a href="#"> New&#9662;</a>
+            <ul class="submenu" style="width: 180px;">
+              <li><a href="news.html">Letest News</a></li>
+              <li><a href="faq.html">FAQS</a></li>
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+        </ul>
+        <button class="menu-icon" id="menu-icon">&#9776;</button>
+      </div>
+   <!-- -----------------------------NAVBAR  END ------------------------------->
+ 
+     <!-- Content -->
+    <main>
+        <div id="intro" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/mer1.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">When Was Mercury First Discovered?</a></h2>
+                        <p style="margin-top: 100px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            There is no single person who is credited with the discovery of Mercury. Mercury is one of the five planets that can be seen in the night sky without using a telescope or binoculars. The planet Mercury has been known since ancient times and was observed for thousands of years by the people of many different cultures.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+    
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px;" src="Assets/planets-image/img/mer2.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">"Swift Planet" Size:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Mercury is one of the smallest planets in our solar system, both in terms of diameter and overall size. Its size can be compared to that of Earth's Moon. Here are some key details about Mercury's size Mercury has an average diameter of about 4,880 kilometers (3,032 miles). This makes it the smallest of the eight planets in our solar system.</p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/mer3.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">Mercury Atmosphere:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Mercury's atmosphere is incredibly thin and sparse, more accurately described as an "exosphere" rather than a true atmosphere. It consists mainly of individual atoms and some molecules that have escaped from the planet's surface due to the Sun's intense heat and the lack of significant gravitational pull to hold onto gases.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-text-right">
+                    <a href="#services" class="tm-btn tm-btn-next">About Mercury</a>
+                </div>   
+                
+            </div>
+            
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/mer4.jpg"></div>
+        </div> <!-- #intro -->
+
+        <div id="services" class="tm-section">
+            <!-- Services left -->
+            <div class="tm-section-col tm-content">
+                <h2 class="tm-text-primary">ABOUT MERCURY</h2>
+                <p>Mercury, the innermost planet of our solar system, is a world of extremes. With a surface that resembles the Moon's, it showcases a rugged terrain adorned with impact craters and vast plains. Enduring temperature swings from scorching days reaching over 800 degrees Fahrenheit (430 degrees Celsius) to chilling nights plummeting to -290 degrees Fahrenheit (-180 degrees Celsius)
+                </p>
+                <p>
+                    In the relentless embrace of the Sun, Mercury dances to its own mystifying tune. This tiny, scorched world boasts days of searing heat that could melt metal and nights colder than the depths of space. Its surface is a testament to cosmic bombardment, adorned with craters and plains that tell stories of eons past. With a magnetic field that defies expectations and a rotation that challenges the norm, Mercury remains a celestial enigma, beckoning us to unravel the secrets hidden within its sunlit embrace.
+                </p>
+                <div class="tm-text-right">
+                    <a href="#gallery" class="tm-btn tm-btn-next">Other Planets</a>
+                </div>                
+                <hr class="tm-hr tm-ml tm-sm-mt-30">
+                <div class="tm-row">
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/866346-200.png" alt="rotation">
+                        </div>                        
+                        <p>
+                            As Mars orbits the Sun, it completes one rotation every 24.6 hours, which is very similar to one day on Earth (23.9 hours). Martian days are called sols – short for "solar day." A year on Mars lasts 669.6 sols, which is the same as 687 Earth days.
+                        </p>
+                    </div>
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="Assets/planets-image/2.png" alt="gravity">
+                        </div>                        
+                        <p>
+                            Though Mars is 15% of Earth's volume, it is only 11% of Earth's mass . This means that the pull of gravity on the surface of Mars is only 38% as strong as the pull of gravity on Earth's surface. A colour illustration of Earth and Mars in space.
+                        </p>
+                    </div>
+                </div>                
+            </div>
+            
+            <!-- Services right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/mer5.jpg"></div>
+        </div> <!-- #services -->
+
+
+        <div id="about" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Interesting Things About Mercury</h2>
+            Assets/planets-image/
+                    Mercury's rotation is unique—it takes about 59 Earth days to complete one rotation on its axis, while its orbit around the Sun takes about 88 Earth days. This 3:2 spin-orbit resonance means that Mercury rotates three times for every two orbits it completes. This results in a peculiar pattern of day-night cycles and a Sun that appears to "stand still" in the sky during certain points in its orbit.
+                </p>
+                <p>
+                    Despite numerous spacecraft missions, the surface of Venus remains largely unexplored due to its hostile conditions. What exactly lies beneath the thick cloud cover?
+                </p>
+                <hr class="tm-hr tm-mb-50">                
+                <p class="tm-mb-50">
+                    Are there active volcanoes or tectonic processes shaping the surface? The recent interest in sending landers to Venus aims to answer these questions.
+                </p>
+                <div class="tm-text-right tm-mb-130">
+                    <a href="#contact" class="tm-btn tm-btn-next">Q/A</a>
+                </div>                
+            </div>
+            
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/mer6.jpg"></div>
+        </div> <!-- #about -->
+
+        <div id="contact" class="tm-section">
+            <!-- Contact left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Some Questions Asked About Mercury</h2>
+                <p>
+                    Question: What is the distance of Mercury from the Sun?<br>
+Answer: Mercury is about 36 million miles (58 million kilometers) away from the Sun on average.<br>
+
+Question: Why is Mercury difficult to observe from Earth?<br>
+Answer: Mercury is difficult to observe from Earth because it is always close to the Sun in the sky. It never strays far from the Sun's glare, making it challenging to see without specialized equipment and techniques.<br>
+
+Question: What is unique about Mercury's rotation and orbit?<br>
+Answer: Mercury has a unique rotation and orbit. It rotates on its axis very slowly, completing three rotations for every two orbits around the Sun. This means that a day on Mercury (one rotation) is longer than its year (one orbit).<br>
+
+Question: What is the surface temperature on Mercury?<br>
+Answer: The surface temperature on Mercury varies dramatically. During the daytime, temperatures can reach up to around 800 degrees Fahrenheit (427 degrees Celsius), while during the night, temperatures can drop to as low as -290 degrees Fahrenheit (-179 degrees Celsius).<br>
+
+Question: Does Mercury have an atmosphere?<br>
+Answer: Yes, but Mercury's atmosphere is extremely thin and tenuous. It consists mainly of oxygen, sodium, and hydrogen, and has a pressure far lower than Earth's atmospheric pressure.<br>
+
+Question: What are some prominent features on Mercury's surface?<br>
+Answer: Mercury's surface is covered in impact craters, similar to the Moon. It also has extensive plains, cliffs, and ridges. One of its most famous features is the Caloris Basin, a large impact crater.<br>
+
+Question: Why is the Caloris Basin on Mercury particularly significant?<br>
+Answer: The Caloris Basin is significant because it's one of the largest impact basins in the solar system. Its formation had a profound impact on Mercury's geology and is thought to have caused global seismic activity and volcanic activity.<br>
+
+Question: Does Mercury have any moons?<br>
+Answer: No, Mercury does not have any moons.<br>
+
+Question: What space probe provided us with the most detailed information about Mercury?<br>
+Answer: The MESSENGER (MErcury Surface, Space ENvironment, GEochemistry, and Ranging) spacecraft provided the most detailed information about Mercury during its mission, which lasted from 2004 to 2015.<br>
+
+Question: What is the significance of Mercury's thin atmosphere?<br>
+Answer: Mercury's thin atmosphere is significant because it allows solar winds and radiation to directly interact with the surface. This interaction contributes to processes such as sputtering, where charged particles from the Sun can erode the planet's surface over time.<br>
+
+                </p> 
+                <p>
+
+                </p>           
+            </div>
+            
+            <!-- Contact right -->
+            <div class="tm-section-col tm-parallax tm-relative" data-parallax="scroll" data-image-src="Assets/planets-image/img/mars7.jpg">
+                <!-- Map -->
+                <!-- <div class="mapouter">
+                    <div class="gmap-canvas">
+                        <iframe width="100%" height="420" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- #contact -->
+    </main>
+
+    <script src="Assets/planets-js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            // const tmMainNav = $("#tm-main-nav");
+
+            // tmMainNav.singlePageNav({
+            //     filter: ':not(.external)'
+            // });
+
+            // $('.navbar-toggler').click(function(e) {
+            //     e.stopPropagation();
+            //     tmMainNav.toggleClass('show');
+            // });
+
+            // $("html").click(function(e) {
+            //     $("#tm-main-nav").removeClass("show");
+            // });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#intro').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+    <script>
+                // <!-- -----------------------------NAVBAR TOGGLE  CODE ------------------------------->
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.menu');
+
+  menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); // Toggle the 'show' class for visibility
+  });
+});
+
+// <!-- -----------------------------NAVBAR TOGGLE END------------------------------->
+    </script>
+</body>
+<footer style="background-color: rgb(47, 46, 48); height: 20%;">
+    <p style="color: white; text-align: center; padding-top: 45px; padding-bottom: 20px;"> <span style="font-size: 25px; font-weight: bold;">Astronomy By Astro5</span> <br> Copyright reseved by Astro5</p>
+  </footer>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saturn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Assets/planets-fontawesome/css/all.min.css">  
+    <link rel="stylesheet" href="Assets/planets-css/magnific-popup.css">       
+    <link rel="stylesheet" href="Assets/planets-css/tooplate-vertex.css">
+
+<style>
+      /* <!-- -----------------------------navbar SECTION -----------------------------  --> */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+  
+      .logo {
+        font-size: 24px;
+        color: white;
+      }
+  
+      .menu-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+        margin-left: 88%;
+        display: none;
+      }
+  
+      .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding: 0 50px 0 0
+      }
+  
+      .menu li {
+        margin: 0 15px;
+        margin-right: 30px;
+        position: relative; /* Added */
+        padding-right: 20px;
+  
+      }
+  
+        .menu li  a{
+          color: white;
+          text-decoration: none;
+        }
+      .menu li  a:hover{
+       
+        color: #3498db;
+        transition: 0.4s;
+      }
+  
+      .submenu {
+        display: none ;
+      padding: 10px 5px 12px 5px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 4px;
+      top: 100%;
+      left: -15px;
+      text-align: justify;
+      z-index: 1;
+      /* border-bottom: 1px solid white;      */
+      }
+  
+      .submenu li{
+        margin-top: 10px;
+        text-decoration: none;
+        list-style: none;         
+    }
+    
+      .menu-item:hover .submenu {
+        display: block;
+      }
+  
+      /* <!-- -----------------------------NAVBAR MEDIA QUERY   -----------------------------  --> */
+    /* Your existing styles for larger screens */
+
+/* Media Query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 50px;
+      height: 300px;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li {
+      margin: 10px;
+      text-align: left;
+  }
+
+  .menu-icon {
+      display: block;
+      margin-top: -8%;
+  }
+  
+  .submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 30%;
+      background-color: rgba(0, 0, 0, 0.795);
+  }
+  .submenu li{
+    height: 20px;
+    text-align: center;
+    
+}
+
+  /* Additional styling adjustments as needed */
+}
+
+
+      /* <!-- -----------------------------navbar  MEDIA QUE END  -------------------------------> */
+      /* <!-- ----------------------------- navbar END  -------------------------------> */
+  
+</style>
+</head>
+<body>
+    
+     <!-- -----------------------------NAVBAR SECTION -----------------------------  -->
+     <div class="navbar">
+        <div class="logo">Astronomy</div>
+          
+            <ul class="menu" id="menu">
+              <li class="menu-item"><a href="index.html" class="active">Home</a></li>
+              <li class="menu-item"><a href="universe.html" class="active">Universe</a></li>
+                <li class="menu-item"><a href="#">Galaxies &#9662;</a>
+                  <ul class="submenu" style="width: 220px ;">
+                    <li><a href="milkway-galaxy.html">The milky way</a></li>
+                    <li><a href="Andromeda-galaxy.html">Andromeda</a></li>
+                    <li><a href="canis-major-dwarf-galaxy.html">Canis major dwarf</a></li>
+                    <li><a href="maffie-1&2-galaxy.html">maffie 1&2</a></li>  
+                    <li><a href="magellanci-galaxy.html">magellanci</a></li> 
+                    <li><a href="cygnus-A.html">Cygnus A</a></li>  
+                    <li><a href="virgo-A-galaxy.html">virgo A galaxy</a></li>  
+        </ul>   
+      </li>
+          <!-- DROP DOWN MENU BAR  -->
+          <li class="menu-item"><a href="#">planets &#9662;</a>
+            <ul class="submenu">
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="mercury.html">Mercury</a></li>
+              <li><a href="mars.html">Mars</a></li> 
+              <li><a href="saturn.html">saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="neptune.html">Neptune</a></li> 
+             
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+          
+          <li class="menu-item"><a href="constellation.html">constellation</a></li>
+          <li class="menu-item"><a href="comet.html">Comets</a></li>
+          <li class="menu-item" class="menu-item"><a href="#"> New&#9662;</a>
+            <ul class="submenu" style="width: 180px;">
+              <li><a href="news.html">Letest News</a></li>
+              <li><a href="faq.html">FAQS</a></li>
+              <!-- Add more planets as needed -->
+            </ul>
+          </li>
+        </ul>
+        <button class="menu-icon" id="menu-icon">&#9776;</button>
+      </div>
+   <!-- -----------------------------NAVBAR  END ------------------------------->
+ 
+     <!-- Content -->
+    <main>
+        <div id="intro" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/sat1.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">When Was Saturn First Discovered?</a></h2>
+                        <p style="margin-top: 100px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Saturn has been known to humans since ancient times and has been visible in the night sky without the need for telescopic equipment. As a result, there is no specific individual or event that can be attributed to the "discovery" of Saturn. Instead, its recognition as a bright and distinctive object in the sky is deeply rooted in the history of astronomy and human observations of celestial bodies. Civilizations such as the Babylonians, Greeks, and Romans were familiar with Saturn and its movements across the night sky. The characteristic golden color of Saturn, attributed to its rings reflecting sunlight, made it stand out from the fixed stars.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+    
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px;" src="Assets/planets-image/img/sat2.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">"The Ringed Beauty" Size:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Saturn, often referred to as the "Ringed Beauty," is the second-largest planet in our solar system and is known for its stunning ring system. Saturn has an equatorial diameter of about 120,536 kilometers (74,898 miles). This makes it approximately nine times wider than Earth. Saturn's volume is approximately 763 times that of Earth. In other words, you could fit about 763 Earths within the volume of Saturn.Saturn's mass is approximately 95 times that of Earth. Despite its massive size, Saturn is less dense than Earth, largely due to its composition of lighter gases.</p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img style="width: 300px;height: 200px;border-radius: 50px" src="Assets/planets-image/img/sat3.jpeg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="#" class="tm-text-primary">Saturn Atmosphere:</a></h2>
+                        <p style="margin-top: 150px;margin-left: -300px;" class="tm-mb-20 tm-text-small">
+                            Saturn's atmosphere is a rich tapestry of swirling clouds, atmospheric layers, and intriguing weather patterns. As a gas giant planet, Saturn's atmosphere is primarily composed of hydrogen and helium, with traces of other gases and compounds. Saturn's atmosphere is predominantly composed of hydrogen (about 96%) and helium (about 3%). The remaining 1% consists of trace amounts of other gases such as methane, ammonia, and water vapor.
+                        </p>
+                        
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-text-right">
+                    <a href="#services" class="tm-btn tm-btn-next">About Saturn</a>
+                </div>   
+                
+            </div>
+            
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/sat4.jpeg"></div>
+        </div> <!-- #intro -->
+
+        <div id="services" class="tm-section">
+            <!-- Services left -->
+            <div class="tm-section-col tm-content">
+                <h2 class="tm-text-primary">ABOUT SATURN</h2>
+                <p>Saturn is renowned for its magnificent ring system, composed of countless icy particles and debris. These rings encircle the planet's equator and are visible from Earth even with a small telescope. The rings are made up of numerous individual ringlets, creating a breathtaking spectacle that has fascinated astronomers for centuries. Similar to Jupiter, Saturn is a gas giant, meaning that it lacks a solid surface and is primarily composed of hydrogen and helium. The presence of these gases contributes to its massive size and low density. Jupiter's atmosphere is marked by prominent bands of clouds that circle the planet parallel to its equator. These bands alternate between light-colored zones and darker bands, driven by powerful winds and varying chemical compositions in the atmosphere.
+                </p>
+                <p>
+                    Saturn's atmosphere is divided into multiple layers, each marked by distinct cloud bands and atmospheric phenomena. These bands are composed of various gases and compounds, creating the planet's characteristic appearance. One of Saturn's most puzzling features is its hexagonal polar storm. This massive hexagon-shaped cloud pattern at Saturn's north pole is a captivating phenomenon that researchers are still working to understand.
+                </p>
+                <div class="tm-text-right">
+                    <a href="#gallery" class="tm-btn tm-btn-next">Other Planets</a>
+                </div>                
+                <hr class="tm-hr tm-ml tm-sm-mt-30">
+                <div class="tm-row">
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="img/866346-200.png" alt="rotation">
+                        </div>                        
+                        <p>
+                            Saturn has the second-shortest day in the solar system. One day on Saturn takes only 10.7 hours (the time it takes for Saturn to rotate or spin around once), and Saturn makes a complete orbit around the Sun (a year in Saturnian time) in about 29.4 Earth years (10,756 Earth days).
+                        </p>
+                    </div>
+                    <div class="tm-col">
+                        <div class="tm-text-center tm-my-50">
+                            <img style="height:200px;" src="img/2.png" alt="gravity">
+                        </div>                        
+                        <p>
+                            The mass of Saturn is 95 times the mass of Earth. However, Saturn's gravity is only 1.08 times the gravity on Earth because Saturn is such a large planet. An object weighing 100 lbs on Earth would weigh 108 lbs on Saturn. Saturn is less dense than water.
+                        </p>
+                    </div>
+                </div>                
+            </div>
+            
+            <!-- Services right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/sat5.jpg"></div>
+        </div> <!-- #services -->
+
+
+        <div id="about" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Interesting Things About Saturn</h2>
+                <p>
+                    The Cassini-Huygens mission, a collaboration between NASA, the European Space Agency (ESA), and the Italian Space Agency (ASI), was one of the most remarkable and successful space missions in the history of planetary exploration. Launched in 1997, the mission provided unprecedented insights into Saturn, its rings, its moons, and its unique atmospheric and magnetic characteristics.Cassini-Huygens aimed to study Saturn's atmosphere, its complex ring system, and its diverse moon system, with a special focus on the moon Titan. The Huygens probe, carried by Cassini, was designed to land on Titan's surface and gather data about its atmosphere and composition.
+                </p>
+                <p>
+                    Saturn, like Earth and other planets, experiences variations in light and darkness as it rotates on its axis. However, Saturn's unique characteristics and rapid rotation create some interesting and complex day-night fluctuations. Saturn has an axial tilt of about 26.7 degrees, similar to Earth's tilt.
+                </p>
+                <hr class="tm-hr tm-mb-50">                
+                <p class="tm-mb-50">
+                    This tilt causes the planet to experience changing seasons as it orbits the Sun. As a result, different parts of Saturn receive varying amounts of sunlight at different times of the year. Saturn rotates rapidly on its axis, completing a full rotation in about 10 hours and 33 minutes. This rapid rotation contributes to the planet's flattened shape at the poles and the bulging at the equator.
+                </p>
+                <div class="tm-text-right tm-mb-130">
+                    <a href="#contact" class="tm-btn tm-btn-next">Q/A</a>
+                </div>                
+            </div>
+            
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Assets/planets-image/img/sat6.jpg"></div>
+        </div> <!-- #about -->
+
+        <div id="contact" class="tm-section">
+            <!-- Contact left -->
+            <div class="tm-section-col tm-content tm-content-small">
+                <h2 class="tm-text-primary">Some Questions Asked About Saturn</h2>
+                <p>
+                    Question: What is Saturn's most distinctive feature that sets it apart from other planets in our solar system?<br><br>
+Answer: Saturn's most distinctive feature is its prominent and extensive ring system, composed mainly of ice particles and dust. No other planet in our solar system has such a prominent and visually striking ring system.<br>
+
+Question: What gives Saturn its unique golden color?<br>
+Answer: Saturn's golden color is primarily due to the presence of various atmospheric gases, including hydrogen and helium. The planet's upper atmosphere contains trace amounts of other elements like ammonia and methane, which can create a yellowish hue when illuminated by the Sun.<br>
+
+Question: What is the largest moon of Saturn, and does it have any special characteristics?<br>
+Answer: Titan is Saturn's largest moon and is the second-largest moon in the entire solar system. It is unique because it has a thick atmosphere primarily composed of nitrogen, with traces of methane. Titan's surface features lakes and rivers of liquid methane and ethane, making it one of the most Earth-like bodies in our solar system.<br>
+
+Question: What is the famous hexagonal pattern observed at Saturn's north pole?<br>
+Answer: Saturn's north pole features a hexagonal-shaped jet stream pattern in its atmosphere. This distinctive hexagon is believed to be a result of interactions between different wind currents in the planet's upper atmosphere, creating this geometric shape.<br>
+
+Question: What spacecraft provided us with the most detailed information about Saturn and its moons?<br>
+Answer: The Cassini-Huygens mission, a collaboration between NASA, the European Space Agency (ESA), and the Italian Space Agency (ASI), provided extensive information about Saturn and its moons. The Cassini spacecraft orbited Saturn for over 13 years, sending back a wealth of data and images.<br>
+
+Question: What is Saturn's composition, and how does it compare to Jupiter's composition?<br>
+Answer: Saturn is primarily composed of hydrogen and helium, similar to Jupiter. However, Saturn has a larger proportion of hydrogen compared to helium, while Jupiter has a slightly higher proportion of helium. Both planets have a small rocky core at their centers.<br>
+
+Question: Why does Saturn have such a low density despite its large size?<br>
+Answer: Saturn's low density is due to its composition and the fact that it is mostly composed of lighter elements like hydrogen and helium. These elements are less dense than rock and metal, which makes up the core of terrestrial planets like Earth.<br>
+
+Question: What is the significance of the Cassini spacecraft's Grand Finale?<br>
+Answer: The Cassini spacecraft's Grand Finale was the deliberate maneuver to send the spacecraft into Saturn's atmosphere at the end of its mission. This was done to prevent the spacecraft from possibly contaminating any of Saturn's potentially habitable moons, like Enceladus or Titan, with Earth microorganisms.<br>
+
+Question: What is the "Great White Spot" on Saturn?<br>
+Answer: The "Great White Spot" on Saturn refers to a series of periodic storm systems that occur roughly once every Saturnian year (about 29.5 Earth years). These storms are intense and can cause noticeable changes in the appearance of Saturn's atmosphere, creating a bright white spot visible from Earth-based telescopes.<br>
+
+Question: How does the day length on Saturn compare to that on Earth?<br>
+Answer: Saturn has a relatively short day, with an average rotation period of about 10.7 hours. In comparison, Earth's rotation period is about 24 hours. This means that a day on Saturn is significantly shorter than a day on Earth.<br>
+
+                </p> 
+                <p>
+
+                </p>           
+            </div>
+            
+            <!-- Contact right -->
+            <div class="tm-section-col tm-parallax tm-relative" data-parallax="scroll" data-image-src="Assets/planets-image/img/sat7.jpg">
+                <!-- Map -->
+                <!-- <div class="mapouter">
+                    <div class="gmap-canvas">
+                        <iframe width="100%" height="420" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </div> <!-- #contact -->
+    </main>
+
+    <script src="Assets/planets-js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            // const tmMainNav = $("#tm-main-nav");
+
+            // tmMainNav.singlePageNav({
+            //     filter: ':not(.external)'
+            // });
+
+            // $('.navbar-toggler').click(function(e) {
+            //     e.stopPropagation();
+            //     tmMainNav.toggleClass('show');
+            // });
+
+            // $("html").click(function(e) {
+            //     $("#tm-main-nav").removeClass("show");
+            // });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#intro').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+    <script>
+                // <!-- -----------------------------NAVBAR TOGGLE  CODE ------------------------------->
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.menu');
+
+  menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); // Toggle the 'show' class for visibility
+  });
+});
+
+// <!-- -----------------------------NAVBAR TOGGLE END------------------------------->
+    </script>
+</body>
+<footer style="background-color: rgb(47, 46, 48); height: 20%;">
+    <p style="color: white; text-align: center; padding-top: 45px; padding-bottom: 20px;"> <span style="font-size: 25px; font-weight: bold;">Astronomy By Astro5</span> <br> Copyright reseved by Astro5</p>
+  </footer>
+</html>
